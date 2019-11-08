@@ -1,4 +1,5 @@
  import discord
+ import os
 
  client = discord.Client()
 
@@ -23,6 +24,7 @@ async del on_message(message):
         await message.channel.send("좋음")
     if message.content.startswith("심심")
         await message.channel.send("나도 심심")
-
-
- client.run("NjMxMTEwNDA1MjI1MzE2MzYy.XcVe7Q.VZ8enJc0VrbYVs9fteDu4R2zOCw")
+     
+ 
+ access_token = os.environ["BOT_TOKEN"]
+ client.run("access_token")
